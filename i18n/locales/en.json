@@ -1,0 +1,13 @@
+{
+  "lang": "English",
+  "nav": {
+    "about": "About",
+    "service": "Услуги",
+    "electric": "Electric work",
+    "reviews": "Reviews",
+    "contacts": "Contacts"
+  },
+  "text": {
+    "hero_title": "Comprehensive solutions"
+  }
+}
