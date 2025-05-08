@@ -14,7 +14,7 @@ async function changeLocale(code) {
           {{ locale }}
         </NavigationMenuTrigger>
         <NavigationMenuContent>
-          <ul class="grid w-[180px] gap-x-4 gap-y-1 p-4 grid-cols-1 bg-white">
+          <ul class="grid w-[180px] gap-x-4 gap-y-1 p-2 grid-cols-1 bg-white">
             <li v-for="(loc, i) in locales" :key="i">
               <NavigationMenuLink as-child>
                 <div @click="changeLocale(loc.code)" class="block">

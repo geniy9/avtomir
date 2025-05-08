@@ -10,9 +10,6 @@ export default () => {
       name: 'electric',
       to: '/#electric'
     },{
-      name: 'reviews',
-      to: '/#reviews'
-    },{
       name: 'contacts',
       to: '/#contacts'
     }],

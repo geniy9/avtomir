@@ -22,7 +22,7 @@ onUnmounted(() => {
 </script>
 <template>
   <header class="fixed top-0 w-full z-20">
-    <div class="px-6 bg-white transition-all" 
+    <div class="bg-white transition-all" 
     :class="[isScrolled ? 'py-1 shadow-2xl' : 'py-3 shadow-none']">
       <div class="section flex justify-between items-center">
         <NuxtLinkLocale to="/">
@@ -40,7 +40,7 @@ onUnmounted(() => {
         
         <div class="flex items-center gap-4">
           
-          <ToggleLocale class="hidden xs:flex" />
+          <ToggleLocale />
           
           <div class="hidden lg:flex flex-col gap-2 text-right text-sm leading-3">
             <a v-for="(m, i) in menuPhones" :key="i" :href="m.to" 

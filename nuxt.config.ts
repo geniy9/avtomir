@@ -15,11 +15,11 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-16',
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0',
-      // link: [
-      //   { rel: "icon", type: "image/ico", sizes: "32x32", href: "/favicon.ico" },
-      //   { rel: "icon", type: "image/png", sizes: "32x32", href: "/32.png" },
-      //   { rel: "apple-touch-icon", type: "image/png", sizes: "180x180", href: "/180.png" },
-      // ]
+      link: [
+        { rel: "icon", type: "image/ico", sizes: "32x32", href: "/favicon.ico" },
+        { rel: "icon", type: "image/png", sizes: "32x32", href: "/32.png" },
+        { rel: "apple-touch-icon", type: "image/png", sizes: "180x180", href: "/180.png" },
+      ]
     },
   },
 
