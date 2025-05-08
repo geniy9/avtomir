@@ -281,20 +281,20 @@ const contactActions = ref([
     </section>
 
     <!-- Section 8: Specific Services -->
-    <section id="contacts" class="py-12 md:py-20 bg-white">
-      <div class="">
-        <h2 class="main_title text-center mb-10 md:mb-16">
+    <section id="contacts" class="bg-gray-50">
+      <div class="py-12 md:py-20">
+        <h2 class="main_title text-center mb-8 md:mb-12">
           {{ $t('text.contact_title') }}
         </h2>
-        <div class="mb-8 md:mb-12 overflow-hidden">
-          <img src="/img/map_yerevan_location.png" :alt="$t('text.contact_map_alt')" 
-            class="w-full object-contain">
+        <div class="overflow-hidden">
+          <Script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A64278d08034e592c5ec053faa160908b4c56c2ff1d65b7ee18f1f7c629bfaadf&amp;width=100%25&amp;height=480&amp;lang=ru_RU&amp;scroll=false">
+          </Script>
         </div>
-        <div class="section bg-gray-50 p-6 md:p-8 flex flex-col lg:flex-row justify-between items-center gap-6">
+        <div class="section py-6 md:py-8 flex flex-col lg:flex-row justify-between items-center gap-6">
           <div class="flex flex-col sm:flex-row gap-4 items-center">
             <img src="/logo.svg" :alt="$t('text.contact_logo_alt')" class="h-14 md:h-16 mr-4 md:mr-6">
             <div class="text-center sm:text-left space-y-1">
-              <p class="text-sm font-semibold text-primary">{{ $t('text.contact_email') }}</p>
+              <p class="text-sm font-semibold text-primary uppercase">{{ $t('text.contact_email') }}</p>
               <p class="text-xs xs:text-sm text-gray-700 uppercase">{{ $t('text.contact_address') }}</p>
               <p class="text-sm text-gray-700 font-medium">{{ $t('text.contact_phone') }}</p>
             </div>
