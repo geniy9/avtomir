@@ -189,13 +189,18 @@ const contactActions = ref([
         <div class="grid grid-cols-1 justify-end sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <div v-for="(item, i) in specificServices" :key="i" class="group relative rounded-lg overflow-hidden shadow-xl block aspect-w-3 aspect-h-2 sm:aspect-w-4 sm:aspect-h-3">
             <img :src="item.img" :alt="item.title" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-4 xs:p-5 md:p-6 text-center xs:text-left">
-              <h3 class="text-white text-lg xs:text-xl md:text-2xl font-bold mb-3 uppercase">
-                {{ item.title }}
-              </h3>
-              <span class="inline-block self-center xs:self-start bg-primary text-white font-semibold py-2 px-5 rounded-md text-sm group-hover:opacity-90 transition-opacity uppercase">
-                {{ $t('text.common_book_service') }}
-              </span>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 xs:p-5 md:p-6 flex justify-between items-end">
+              <div class="flex flex-col justify-end flex-1">
+                <h3 class="text-white text-lg xs:text-xl md:text-2xl font-bold mb-3 uppercase">
+                  {{ item.title }}
+                </h3>
+                <span class="inline-block self-center xs:self-start bg-primary text-white font-semibold py-2 px-5 rounded-md text-sm group-hover:opacity-90 transition-opacity uppercase">
+                  {{ $t('text.common_book_service') }}
+                </span>
+              </div>
+              <div v-if="(i === 10)" class="shrink-0 bg-white/10 backdrop-blur-sm p-2 rounded-md">
+                <img src="/svg/logo_fine_oil.svg" alt="Fine Oil" class="w-auto h-20" />
+              </div>
             </div>
           </div>
           <div class="hidden sm:block sm:col-span-1 lg:col-span-2 place-content-end">

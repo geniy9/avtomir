@@ -24,10 +24,20 @@ onUnmounted(() => {
   <header class="fixed top-0 w-full z-20">
     <div class="bg-white transition-all" 
     :class="[isScrolled ? 'py-1 shadow-2xl' : 'py-3 shadow-none']">
-      <div class="section flex justify-between items-center">
-        <NuxtLinkLocale to="/">
-          <img src="/logo.svg" alt="logo" class="w-auto" :class="[isScrolled ? 'h-12' : 'h-16']" />
-        </NuxtLinkLocale>
+      <div class="section flex justify-between gap-4 items-center">
+        <div class="flex items-center gap-5">
+          <NuxtLinkLocale to="/">
+            <img src="/logo.svg" alt="Logo Avtomir" class="w-auto" :class="[isScrolled ? 'h-12' : 'h-16']" />
+          </NuxtLinkLocale>
+          <NuxtLinkLocale to="/" class="hidden sm:flex items-center justify-start gap-2">
+            <div class="shrink-0">
+              <img src="/svg/logo_fine_oil.svg" alt="Fine Oil" class="w-auto" :class="[isScrolled ? 'h-10' : 'h-16']" />
+            </div>
+            <span class="uppercase text-[#AF2D32] text-xs text-wrap font-bold max-w-20 leading-4">
+              {{ $t('text.our_partner') }}
+            </span>
+          </NuxtLinkLocale>
+        </div>
         <nav class="hidden lg:flex">
           <ul class="flex items-center">
             <li v-for="(m, i) in menuMain" :key="i">
@@ -63,7 +73,7 @@ onUnmounted(() => {
     
     <div class="fixed h-screen top-0 right-0 bottom-0 z-40 shadow-2xl transition-all duration-300" 
       :class="isOpen ? 'translate-x-0 w-5/6' : 'translate-x-full w-0'">
-      <div class="relative h-screen flex flex-col justify-start gap-12 p-6 bg-gray-100 rounded-l-2xl">
+      <div class="relative h-screen flex flex-col justify-between gap-12 p-6 bg-gray-100 rounded-l-2xl">
         <div class="relative max-w-full flex items-start justify-between">
           <NuxtLinkLocale @click="toggleBurger" to="/">
             <img src="/logo.svg" alt="logo" class="w-40 h-auto mr-4" />        
@@ -78,12 +88,21 @@ onUnmounted(() => {
         <nav @click="toggleBurger">
           <ul class="flex flex-col items-start">
             <li v-for="(m, i) in menuMain" :key="i">
-              <NuxtLinkLocale :to="m.to" class="block text-sm text-black font-bold tracking-widest select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none uppercase">
+              <NuxtLinkLocale :to="m.to" class="block text-sm text-gray-900 font-bold tracking-widest select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none uppercase">
                 {{ $t(`nav.${m.name}`) }}
               </NuxtLinkLocale>
             </li>
           </ul>
         </nav>
+
+        <div class="flex items-center justify-start gap-2">
+          <div class="shrink-0">
+            <img src="/svg/logo_fine_oil.svg" alt="Fine Oil" class="w-auto h-20" />
+          </div>
+          <span class="uppercase text-[#AF2D32] text-sm text-wrap font-bold max-w-20 leading-4">
+            {{ $t('text.our_partner') }}
+          </span>
+        </div>
 
       </div>
     </div>
