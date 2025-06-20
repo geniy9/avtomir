@@ -1,5 +1,4 @@
 <script setup>
-const { locale, locales } = useI18n()
 const i18nHead = useLocaleHead({
   addDirAttribute: true,
   addVariantTags: true // или addLangAttribute: true

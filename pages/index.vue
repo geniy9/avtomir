@@ -194,9 +194,9 @@ const contactActions = ref([
                 <h3 class="text-white text-lg xs:text-xl md:text-2xl font-bold mb-3 uppercase">
                   {{ item.title }}
                 </h3>
-                <span class="inline-block self-center xs:self-start bg-primary text-white font-semibold py-2 px-5 rounded-md text-sm group-hover:opacity-90 transition-opacity uppercase">
+                <a href="https://wa.me/37491003696" target="_blank" class="inline-block self-center xs:self-start bg-primary text-white font-semibold py-2 px-5 rounded-md text-sm group-hover:opacity-90 transition-opacity uppercase">
                   {{ $t('text.common_book_service') }}
-                </span>
+                </a>
               </div>
               <div v-if="(i === 10)" class="shrink-0 bg-white/10 backdrop-blur-sm p-2 rounded-md">
                 <img src="/svg/logo_fine_oil.svg" alt="Fine Oil" class="w-auto h-20" />
@@ -218,15 +218,15 @@ const contactActions = ref([
       </div>
       <div class="section py-12 md:py-20">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-          <a v-for="(item, i) in electricServices" :key="i" href="#" class="group relative rounded-lg overflow-hidden shadow-xl block aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3">
+          <a v-for="(item, i) in electricServices" :key="i" href="https://wa.me/37491003696" target="_blank" class="group relative rounded-lg overflow-hidden shadow-xl block aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3">
             <img :src="item.img" :alt="$t('text.electric_item' + (i + 1) + '_title')" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-5 md:p-6">
               <h3 class="text-white text-xl md:text-2xl font-bold mb-3 uppercase">
                 {{ item.title }}
               </h3>
-              <span class="inline-block self-start bg-primary text-white font-semibold py-2 px-5 rounded-md text-sm group-hover:opacity-90 transition-opacity uppercase">
+              <Button class="inline-block self-start bg-primary text-white font-semibold py-2 px-5 rounded-md text-sm group-hover:opacity-90 transition-opacity uppercase">
                 {{ $t('text.common_book_service') }}
-              </span>
+              </Button>
             </div>
           </a>
         </div>
@@ -262,7 +262,7 @@ const contactActions = ref([
           </div>
         </div>
         <div class="text-center mt-6 md:mt-12">
-          <a href="#" class="bg-primary text-white font-bold py-3 px-10 rounded-md text-lg uppercase">
+          <a href="https://wa.me/37491003696" target="_blank" class="bg-primary text-white font-bold py-3 px-10 rounded-md text-lg uppercase">
             {{ $t('text.common_submit_request') }}
           </a>
         </div>
@@ -308,9 +308,9 @@ const contactActions = ref([
             <a v-for="(item, i) in contactActions" :key="i" :href="item.href" target="_blank" class=" rounded-full">
               <img :src="item.icon" :alt="$t('text.contact_action' + (i + 1) + '_alt')" class="h-9 w-9 text-primary p-1" />
             </a>
-            <span class="bg-primary text-white font-semibold py-3 px-6 rounded-md hover:opacity-90 transition-opacity text-sm whitespace-nowrap uppercase">
+            <a href="https://wa.me/37491003696" target="_blank" class="bg-primary text-white font-semibold py-3 px-6 rounded-md hover:opacity-90 transition-opacity text-sm whitespace-nowrap uppercase">
               {{ $t('text.common_submit_request') }}
-            </span>
+            </a>
           </div>
         </div>
       </div>
