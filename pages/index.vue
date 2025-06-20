@@ -94,6 +94,11 @@ const contactActions = ref([
   { href: 'tel:+37491003696', icon: '/svg/icon_phone.svg', alt: 'Телефон' },
   { href: 'https://t.me/arnold_evn', icon: '/svg/icon_telegram.svg', alt: 'Telegram' }
 ])
+
+function externalLink(title) {
+  const encodedMessage = encodeURIComponent(`${t('text.whatcapp_message')}: ${title}`);
+  return `https://wa.me/37491003696?text=${encodedMessage}`
+}
 </script>
 <template>
   <div class="bg-white">
@@ -194,7 +199,7 @@ const contactActions = ref([
                 <h3 class="text-white text-lg xs:text-xl md:text-2xl font-bold mb-3 uppercase">
                   {{ item.title }}
                 </h3>
-                <a href="https://wa.me/37491003696" target="_blank" class="inline-block self-center xs:self-start bg-primary text-white font-semibold py-2 px-5 rounded-md text-sm group-hover:opacity-90 transition-opacity uppercase">
+                <a :href="externalLink(item.title)" target="_blank" class="inline-block self-center xs:self-start bg-primary text-white font-semibold py-2 px-5 rounded-md text-sm group-hover:opacity-90 transition-opacity uppercase">
                   {{ $t('text.common_book_service') }}
                 </a>
               </div>
@@ -218,7 +223,7 @@ const contactActions = ref([
       </div>
       <div class="section py-12 md:py-20">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-          <a v-for="(item, i) in electricServices" :key="i" href="https://wa.me/37491003696" target="_blank" class="group relative rounded-lg overflow-hidden shadow-xl block aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3">
+          <a v-for="(item, i) in electricServices" :key="i" :href="externalLink(item.title)" target="_blank" class="group relative rounded-lg overflow-hidden shadow-xl block aspect-w-1 aspect-h-1 sm:aspect-w-4 sm:aspect-h-3">
             <img :src="item.img" :alt="$t('text.electric_item' + (i + 1) + '_title')" class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-5 md:p-6">
               <h3 class="text-white text-xl md:text-2xl font-bold mb-3 uppercase">
